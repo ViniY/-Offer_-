@@ -2,7 +2,7 @@ This project is only used for doing the question in the “剑指Offer” book w
 versions for different Programming lanaguages. 
 
 
-This project will be written in two languages （Javc and Python).
+This project will be written in two languages （Java and Python).
 
 
 
