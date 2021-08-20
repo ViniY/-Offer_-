@@ -59,4 +59,9 @@ public class Node {
     public void setNodeId(int nodeId) {
         this.nodeId = nodeId;
     }
+
+    public void drawTree(Node root){
+
+
+    }
 }

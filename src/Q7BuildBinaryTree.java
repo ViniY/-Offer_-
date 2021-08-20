@@ -5,44 +5,27 @@
  * */
 
 public class Q7BuildBinaryTree {
-    private int[] pre;
-    private int[] inOrder;
+    private int[] pre; // The tree built in preorder
+    private int[] inOrder; // The tree built in inorder
     public Q7BuildBinaryTree(int[] input_pre, int[] input_in){
         this.pre = input_pre;
         this.inOrder = input_in;
     }
-    private void buildTree(){
-        int left;
-        int right;
+    private void buildTree() {
+        int left; //left node value
+        int right; // right tree value
         int length = this.pre.length;
         int[] ans = new int[length];
         int root = pre[0]; // get the root then we need to find the root in the array of in order
-        BinaryNode rt = new BinaryNode(pre[0]);
-        int rootIndex= 0;
-        for(int i=0; i<length; ++i){
-            if(inOrder[i]==root){
+        int rootIndex = 0;
+        for (int i = 0; i < length; ++i) {
+            if (inOrder[i] == root) {
                 rootIndex = i;
             }
         }
         left = rootIndex;
-        right = length - rootIndex-1;
+        right = length - rootIndex - 1;
 
-
-
-
-    }
-    public class BinaryNode{
-        BinaryNode parent;
-        BinaryNode[] children;
-        int value;
-        public BinaryNode(int value){
-            this.value = value;
-        }
-        public BinaryNode(int value, BinaryNode parent, BinaryNode[] children){
-            this.value = value;
-            this.parent = parent;
-            this.children = children;
-        }
 
     }
 
