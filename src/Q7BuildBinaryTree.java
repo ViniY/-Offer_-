@@ -3,7 +3,7 @@
  * One array is the result of in-order tree and the other one is tree in pre-order
  * And the goal of this program is to rebuild the tree
  * */
-
+    
 public class Q7BuildBinaryTree {
     private int[] pre; // The tree built in preorder
     private int[] inOrder; // The tree built in inorder
