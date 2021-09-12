@@ -20,11 +20,8 @@ public class BinaryTreePrinter {
         getValuesInorder(n.right);
     } 
 
-    public void inOrderSoter(){
 
-
-    }
-    public void printer(){
+    public void printer(ArrayList<Double> values){
 
 
 
