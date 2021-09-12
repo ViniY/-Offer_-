@@ -2,8 +2,13 @@
  * The inputs of this question are two binary tree as two arrays
  * One array is the result of in-order tree and the other one is tree in pre-order
  * And the goal of this program is to rebuild the tree
+ *
+ *
+ * First we need to find the root node then find the left branch and the right branch of the tree
+ * Fiding nodes for each branch we need to use the list in in-order
+ * Then use the preorder to build the tree.
  * */
-    
+
 public class Q7BuildBinaryTree {
     private int[] pre; // The tree built in preorder
     private int[] inOrder; // The tree built in inorder
@@ -12,21 +17,19 @@ public class Q7BuildBinaryTree {
         this.inOrder = input_in;
     }
     private void buildTree() {
-        int left; //left node value
-        int right; // right tree value
+        double left; //left node value
+        double right; // right tree value
         int length = this.pre.length;
-        int[] ans = new int[length];
-        int root = pre[0]; // get the root then we need to find the root in the array of in order
+        double[] ans = new double[length];
+        double root = pre[0]; // get the root then we need to find the root in the array of in order
         int rootIndex = 0;
         for (int i = 0; i < length; ++i) {
             if (inOrder[i] == root) {
                 rootIndex = i;
             }
         }
-        left = rootIndex;
-        right = length - rootIndex - 1;
-
-
+        BinaryTreeNode rootNode = new BinaryTreeNode(root);
+        rootNode.setValue(root);
     }
 
 

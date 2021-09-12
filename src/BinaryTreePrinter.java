@@ -12,12 +12,12 @@ public class BinaryTreePrinter {
     }
 
     public void getValuesInorder(BinaryTreeNode n){
-        if (n.left==null){
+        if (n.getLeftNode()==null){
             return;
         }
-        getValuesInorder(n.left);
+        getValuesInorder(n.getLeftNode());
         values.add(n.value);
-        getValuesInorder(n.right);
+        getValuesInorder(n.getRightNode());
     } 
 
 

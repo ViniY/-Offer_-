@@ -2,9 +2,9 @@ import com.sun.source.tree.BinaryTree;
 
 public class BinaryTreeNode {
     double value = 0;
-    BinaryTreeNode left= null;
-    BinaryTreeNode right = null;
-    BinaryTreeNode parent = null;
+    private BinaryTreeNode left= null;
+    private BinaryTreeNode right = null;
+    private BinaryTreeNode parent = null;
     public BinaryTreeNode(double value) {
         this.value = value;
     }
@@ -22,25 +22,34 @@ public class BinaryTreeNode {
         this.left = left;
 
     }
-    private void setRightNode(BinaryTreeNode right){
+    public void setRightNode(BinaryTreeNode right){
         this.right = right;
     }
 
-    private void setParent(BinaryTreeNode parent){
+    public void setParent(BinaryTreeNode parent){
         this.parent = parent;
     }
 
-    private void setValue(double value){
+
+    public BinaryTreeNode getRightNode(){
+        return left;
+    }
+
+    public BinaryTreeNode getLeftNode(){
+        return right;
+    }
+
+    public void setValue(double value){
         this.value = value;
 
     }
 
-    private double getValue(){
+    public double getValue(){
         return this.value;
 
     }
 
-    private BinaryTreeNode getParent(){
+    public BinaryTreeNode getParent(){
         return this.parent;
     }
 
