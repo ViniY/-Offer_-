@@ -18,7 +18,7 @@ public class BinaryTreePrinter {
         getValuesInorder(n.getLeftNode());
         values.add(n.value);
         getValuesInorder(n.getRightNode());
-    } 
+    }
 
 
     public void printer(ArrayList<Double> values){

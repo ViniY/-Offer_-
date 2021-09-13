@@ -10,13 +10,19 @@
  * */
 
 public class Q7BuildBinaryTree {
+    int barometer = 0;
+    static int preIndex = 0;
     private int[] pre; // The tree built in preorder
     private int[] inOrder; // The tree built in inorder
     public Q7BuildBinaryTree(int[] input_pre, int[] input_in){
         this.pre = input_pre;
         this.inOrder = input_in;
     }
-    private void buildTree() {
+
+//    public BinaryTreeNode buildTree(int inputPre, int inputIn, int length){
+//        if(length <=0 || )
+//    }
+    private void buildTreeCore() {
         double left; //left node value
         double right; // right tree value
         int length = this.pre.length;
@@ -25,19 +31,27 @@ public class Q7BuildBinaryTree {
         int rootIndex = 0;
         for (int i = 0; i < length; ++i) {
             if (inOrder[i] == root) {
-                rootIndex = i;
+                this.barometer++;
+                rootIndex = i; //here we find the root node index in inorder tree traversal
+                break; //remove the useless steps
             }
         }
         BinaryTreeNode rootNode = new BinaryTreeNode(root);
         rootNode.setValue(root);
+        int leftTreeIndex = rootIndex-1;
+        int rightTreeIndex = rootIndex +1;
     }
+
+
+
+
 
 
     public static void main(String[] args) {
         int[] input_pre={1,2,4,7,3,5,6,8};
         int[] input_in = {4,7,2,1,5,3,8,6};
         Q7BuildBinaryTree q7 = new Q7BuildBinaryTree(input_pre, input_in);
-        q7.buildTree();
+//        q7.buildTree();
     }
 
 
